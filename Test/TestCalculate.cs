@@ -41,5 +41,33 @@ namespace Test
         {
             Assert.AreEqual(10, calculate.Sum([1, 2, 3, 4]));
         }
+
+        //Kiểm tra số lẻ hay không
+        // 0 -1 1 2 3
+        [Test]
+        public void TestSoLeNegative()
+        {
+            Assert.IsFalse(calculate.CheckSoLe(-1));
+        }
+        [Test]
+        public void TestSoLeZero()
+        {
+            Assert.IsFalse(calculate.CheckSoLe(0));
+        }
+        [Test]
+        public void TestSoLeOne()
+        {
+            Assert.IsTrue(calculate.CheckSoLe(1));
+        }
+        [Test]
+        public void TestSoLeTwo()
+        {
+            Assert.IsFalse(calculate.CheckSoLe(2));
+        }
+        [Test]
+        public void TestSoLeThree()
+        {
+            Assert.IsTrue(calculate.CheckSoLe(3));
+        }
     }
 }

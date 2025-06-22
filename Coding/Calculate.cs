@@ -17,6 +17,11 @@ namespace Coding
             }
             return sum;
         }
+        /// <summary>
+        /// Kiểm tra số vào là số lẻ hay không
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public bool CheckSoLe(int n)
         {
             if(n < 0)
@@ -28,6 +33,22 @@ namespace Coding
                 return true;
             }
             return false;
+        }
+        /// <summary>
+        /// Liệt kê các số từ 1 đến 100 bỏ qua số chia hết cho 5
+        /// </summary>
+        /// <returns></returns>
+        public List<int> GetNumber()
+        {
+            List<int> lstInt = new List<int>();
+            for (int i = 1; i <= 100; i++)
+            {
+                if(i % 5 !=0)
+                {
+                    lstInt.Add(i);
+                }
+            }
+            return lstInt;
         }
     }
 }
